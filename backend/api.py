@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import random
 import time
+from fastapi.middleware.cors import CORSMiddleware
 
 def get_word(path):
     with open(path,"r",encoding="utf-8") as f:
