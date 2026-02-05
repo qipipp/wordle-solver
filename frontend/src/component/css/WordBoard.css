@@ -1,0 +1,18 @@
+﻿.wordListArea {
+	height: 400px;
+	overflow-y: auto;
+	border: 2px solid #ccc;
+	border-radius: 12px;
+	padding: 12px;
+	background-color: #fff;
+	margin-bottom: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+	width: 375px;
+}
+
+	.wordListArea .row {
+		margin: 2px !important;
+	}

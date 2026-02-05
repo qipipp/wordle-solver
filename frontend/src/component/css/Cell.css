@@ -1,0 +1,24 @@
+.cell {
+	width: 54px;
+	height: 54px;
+	border: 2px solid #d7d7d7;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 800;
+	font-size: 22px;
+	user-select: none;
+}
+
+	.cell.c0 {
+		background: #f3f3f3;
+	}
+
+	.cell.c1 {
+		background: #fff2b2;
+	}
+
+	.cell.c2 {
+		background: #bff0c7;
+	}

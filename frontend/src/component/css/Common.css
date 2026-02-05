@@ -1,0 +1,90 @@
+﻿/* 입력 영역 전체 레이아웃 */
+.inputArea {
+	display: flex;
+	flex-direction: column; /* 위아래로 배치 (입력줄 / 검색버튼) */
+	gap: 12px;
+	margin-top: 24px; /* 보드와의 간격 */
+	padding: 0 8px;
+}
+
+	/* 입력창과 Add 버튼이 있는 줄 */
+	.inputArea > div {
+		display: flex;
+		gap: 8px;
+		justify-content: center;
+	}
+
+	/* 1. 인풋(Input) 스타일 */
+	.inputArea input {
+
+		flex: 1; /* 남은 공간 꽉 채우기 */
+		padding: 10px 14px;
+		font-size: 1rem;
+		font-weight: normaㅣ;
+		text-align: center;
+		/* 테두리와 모양 */
+		border: 2px solid #e0e0e0;
+		border-radius: 8px;
+		outline: none; /* 클릭 시 기본 파란 테두리 제거 */
+		background-color: #f9f9f9;
+		transition: all 0.2s ease;
+	}
+
+		/* 인풋 클릭(포커스)했을 때 */
+		.inputArea input:focus {
+			border-color: #1890ff; /* 파란색으로 변경 */
+			background-color: #fff;
+			box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1); /* 은은한 파란 번짐 */
+		}
+
+	.inputArea button,
+	.candScroll button {
+		padding: 10px 20px;
+		font-size: 1rem;
+		font-weight: bold;
+		cursor: pointer;
+		border: 2px solid #d9d9d9;
+		border-radius: 8px;
+		background-color: white;
+		color: #333;
+		transition: all 0.2s ease;
+	}
+
+.candScroll button {
+	display: block;
+	margin: 15px auto 15px;
+	width: fit-content;
+}
+
+		/* 마우스 올렸을 때 */
+		.inputArea button:hover,
+		.candScroll button:hover {
+			border-color: #1890ff;
+			color: #1890ff;
+			background-color: #f0f7ff;
+		}
+
+		/* 눌렀을 때 */
+		.inputArea button:active,
+		.candScroll button:active {
+			transform: scale(0.98);
+		}
+
+	/* 3. Search 버튼만 특별하게 (강조) */
+	.inputArea > button:last-child {
+		width: 100%; /* 가로 꽉 채우기 */
+		background-color: #1890ff;
+		border-color: #1890ff;
+		color: white;
+		margin-top: 4px;
+		padding: 12px; /* 좀 더 두툼하게 */
+		font-size: 1.1rem;
+	}
+
+		/* Search 버튼 호버 */
+		.inputArea > button:last-child:hover {
+			background-color: #40a9ff;
+			border-color: #40a9ff;
+			color: white;
+			box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3); /* 파란 그림자 */
+		}
