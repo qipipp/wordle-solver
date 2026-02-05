@@ -1,5 +1,7 @@
 export type Pair = { word: string; result: number };
 
+const BASE_URL = "https://wordle-solver-7w9k.onrender.com";
+
 export type GetCandidateReq = {
     pairs: Pair[];
     start: number;
@@ -12,7 +14,7 @@ export type GetCandidateRes = {
 };
 
 export async function getCandidate(req: GetCandidateReq): Promise<GetCandidateRes> {
-    const res = await fetch("/api/get_candidate", {
+    const res = await fetch(`${BASE_URL}/api/get_candidate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(req),
@@ -33,7 +35,7 @@ export type GetRecommendationRes = {
 export async function getRecommendation(
     req: GetRecommendationReq
 ): Promise<GetRecommendationRes> {
-    const res = await fetch("/api/get_recommendation", {
+    const res = await fetch(`${BASE_URL}/api/get_recommendation`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(req),
